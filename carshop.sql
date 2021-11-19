@@ -164,3 +164,215 @@ INSERT INTO accessory (name, description)
 VALUES ('Parkovací senzory', 'Neodřete si auto při parkování')
 ;
 
+-- car and accessory 
+        
+CREATE TABLE car_accessory(
+car_id INT ,
+accessory_id INT 
+);          
+ALTER TABLE car
+ADD FOREIGN KEY (id) REFERENCES car_accessory(car_id)
+;
+
+
+ALTER TABLE car_accessory
+ADD FOREIGN KEY (car_id) REFERENCES car(id)
+;
+
+
+ALTER TABLE car_accessory
+ADD FOREIGN KEY (car_id) REFERENCES car(id);
+
+
+ALTER TABLE `car_accessory`
+ADD FOREIGN KEY (`car_id`, `accessory_id`) REFERENCES `car` (`id`, `id`)
+
+
+ALTER TABLE `car`
+CHANGE `id` `id` int NOT NULL AUTO_INCREMENT FIRST;
+
+
+ALTER TABLE car_accessory
+ADD FOREIGN KEY (car_id) REFERENCES car(id);
+
+
+ALTER TABLE garage
+DROP FOREIGN KEY garage_id;
+
+
+ALTER TABLE car_accessory
+ADD FOREIGN KEY (accessory_id) REFERENCES accessory(id);
+
+
+ALTER TABLE `accessory`
+CHANGE `id` `id` int NOT NULL AUTO_INCREMENT FIRST;
+
+
+ALTER TABLE car_accessory
+ADD FOREIGN KEY (accessory_id) REFERENCES accessory(id);
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('1', '1');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('2', '1');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('3', '1');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('4', '1');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('5', '1');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('6', '1');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('7', '1');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('8', '1');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('9', '1');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('10', '1');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('11', '1');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('12', '1');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('13', '1');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('14', '1');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('15', '1');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('16', '6, 2, 3');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('16', '6');
+
+
+UPDATE `car_accessory` SET
+`car_id` = '16',
+`accessory_id` = '8'
+WHERE `car_id` = '16' AND `accessory_id` = '6'
+LIMIT 1;
+
+
+ALTER TABLE `car_accessory`
+CHANGE `accessory_id` `accessory_id` varchar(255) NULL AFTER `car_id`;
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('16', '6');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('16', '10');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('17', '10');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('17', '3');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('17', '4');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('18', '2');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('18', '9');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('18', '7');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('19', '5');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('19', '4');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('19', '6');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('20', '1');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('20', '2');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('20', '3');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('20', '4');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('20', '5');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('20', '6');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('20', '7');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('20', '8');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('20', '9');
+
+
+INSERT INTO car_accessory (car_id, accessory_id)
+VALUES ('20', '10');
+
+
+SELECT COUNT(*) from car_accessory;

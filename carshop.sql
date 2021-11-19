@@ -89,3 +89,78 @@ Upravit 10:18:36 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 
 Upravit 10:18:33 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 1 WHERE id = 3;  
 Upravit 10:18:15 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 1 WHERE id = 2;  
 Upravit 10:17:45 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 1 WHERE id = 1; 
+        
+        
+ --accessory
+CREATE TABLE accessory(
+id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR (255),
+description TEXT
+);  
+INSERT INTO accessory (name, description)
+VALUES ('Vyhřívaná sedačka', 'Prostě bude větší teplo')
+;
+
+
+
+
+INSERT INTO accessory (name, description)
+VALUES ('Hlídání mrtvého bodu', 'Nebude tak lehké se zabít')
+;
+
+
+
+
+INSERT INTO accessory (name, description)
+VALUES ('Posilovač řízení', 'Nemusíte být korba, aby jste mohl točit volantem')
+;
+
+
+
+
+INSERT INTO accessory (name, description)
+VALUES ('Elektrické ovládání oken', 'Klička už je velmi zastaralá')
+;
+
+
+
+
+INSERT INTO accessory (name, description)
+VALUES ('Tempomat', 'Neupadne vám noha, když jedete po dálnici')
+;
+
+
+
+
+INSERT INTO accessory (name, description)
+VALUES ('Bluetooth', 'Můžete si poslouchat vlastní muziku a ne radio impuls')
+;
+
+
+
+
+INSERT INTO accessory (name, description)
+VALUES ('Kožená sedadla', 'Tohle nechcete, protože v létě shoříte')
+;
+
+
+
+
+INSERT INTO accessory (name, description)
+VALUES ('Sledování jízdního pruhu', 'Jestli chcete spát, když řídítě, tak je to ideálí možnost')
+;
+
+
+
+
+INSERT INTO accessory (name, description)
+VALUES ('Asistent rozjezdu do kopce', 'Nepotřebujete, aby vám to chcíplo v kopci')
+;
+
+
+
+
+INSERT INTO accessory (name, description)
+VALUES ('Parkovací senzory', 'Neodřete si auto při parkování')
+;
+

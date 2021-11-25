@@ -60,35 +60,35 @@ WHERE id = 10;
 
 -- 
 Historie
-Upravit 10:26:28 ALTER TABLE car ADD FOREIGN KEY (garage_id) REFERENCES garage(id);
-Upravit 10:25:53 ALTER TABLE garage ADD FOREIGN KEY (id) REFERENCES car(garage_id);
-Upravit 10:25:33 ALTER TABLE `car` CHANGE `garage_id` `garage_id` int unsigned NULL AFTER `mafufa… (0.258 s)
-Upravit 10:25:04 ALTER TABLE garage ADD FOREIGN KEY (id) REFERENCES car(garage_id);
-Upravit 10:24:28 ALTER TABLE car ADD FOREIGN KEY (garage_id) REFERENCES garage(id);
-Upravit 10:22:27 ALTER TABLE garage ADD FOREIGN KEY (id) REFERENCES car(garage_id);
-Upravit 10:20:20 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 5 WHERE id = 20 ;…
-Upravit 10:20:14 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 5 WHERE id = 19 ;…
-Upravit 10:20:10 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 4 WHERE id = 18 ;…
-Upravit 10:20:08 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 4 WHERE id = 17 ;…
-Upravit 10:20:05 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 4 WHERE id = 16 ;…
-Upravit 10:20:01 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 3 WHERE id = 15 ;…
-Upravit 10:19:58 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 3 WHERE id = 14 ;…
-Upravit 10:19:56 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 3 WHERE id = 13 ;…
-Upravit 10:19:53 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 3 WHERE id = 12 ;…
-Upravit 10:19:50 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 3 WHERE id = 11 ;…
-Upravit 10:19:43 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 2 WHERE id = 10 ;…
-Upravit 10:19:40 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 2 WHERE id = 9 ; …
-Upravit 10:19:33 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 1 WHERE id = 5;  
-Upravit 10:19:05 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 2 WHERE id = 8;  
-Upravit 10:19:01 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 2 WHERE id = 5;  
-Upravit 10:18:51 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 2 WHERE id = 8;  
-Upravit 10:18:47 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 2 WHERE id = 7;  
-Upravit 10:18:43 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 2 WHERE id = 6;  
-Upravit 10:18:39 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 1 WHERE id = 5;  
-Upravit 10:18:36 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 1 WHERE id = 4;  
-Upravit 10:18:33 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 1 WHERE id = 3;  
-Upravit 10:18:15 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 1 WHERE id = 2;  
-Upravit 10:17:45 ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 1 WHERE id = 1; 
+ALTER TABLE car ADD FOREIGN KEY (garage_id) REFERENCES garage(id);
+ALTER TABLE garage ADD FOREIGN KEY (id) REFERENCES car(garage_id);
+ALTER TABLE `car` CHANGE `garage_id` `garage_id` int unsigned NULL AFTER `mafufa… (0.258 s)
+ALTER TABLE garage ADD FOREIGN KEY (id) REFERENCES car(garage_id);
+ALTER TABLE car ADD FOREIGN KEY (garage_id) REFERENCES garage(id);
+ALTER TABLE garage ADD FOREIGN KEY (id) REFERENCES car(garage_id);
+ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 5 WHERE id = 20 ;…
+ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 5 WHERE id = 19 ;…
+ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 4 WHERE id = 18 ;…
+ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 4 WHERE id = 17 ;…
+ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 4 WHERE id = 16 ;…
+ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 3 WHERE id = 15 ;…
+ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 3 WHERE id = 14 ;…
+ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 3 WHERE id = 13 ;…
+ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 3 WHERE id = 12 ;…
+ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 3 WHERE id = 11 ;…
+ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 2 WHERE id = 10 ;…
+ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 2 WHERE id = 9 ; …
+ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 1 WHERE id = 5;  
+ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 2 WHERE id = 8;  
+ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 2 WHERE id = 5;  
+ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 2 WHERE id = 8;  
+ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 2 WHERE id = 7;  
+ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 2 WHERE id = 6;  
+ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 1 WHERE id = 5;  
+ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 1 WHERE id = 4;  
+ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 1 WHERE id = 3;  
+ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 1 WHERE id = 2;  
+ALTER TABLE car ADD garage_id INT;  UPDATE car SET garage_id = 1 WHERE id = 1; 
         
         
  --accessory
@@ -357,8 +357,7 @@ VALUES ('20', '5');
 
 INSERT INTO car_accessory (car_id, accessory_id)
 VALUES ('20', '6');
-
-
+   
 INSERT INTO car_accessory (car_id, accessory_id)
 VALUES ('20', '7');
 
@@ -376,3 +375,10 @@ VALUES ('20', '10');
 
 
 SELECT COUNT(*) from car_accessory;
+
+        
+        
+-- LEFT JOIN
+        SELECT c.manufacturer,c.model,c.garage_id,g.name,g.gps_x,g.gps_y
+FROM car c
+LEFT JOIN garage g ON c.id = g.id;

@@ -382,3 +382,10 @@ SELECT COUNT(*) from car_accessory;
         SELECT c.manufacturer,c.model,c.garage_id,g.name,g.gps_x,g.gps_y
 FROM car c
 LEFT JOIN garage g ON c.id = g.id;
+        
+        
+-- JOIN tři tabulky dohromady
+        SELECT c.model,c.manufacturer,a.name,a.description,c.id
+FROM car c
+LEFT JOIN car_accessory c_a ON c.id =c_a.car_id
+LEFT JOIN accessory a ON c.id=c_a.accessory_id;

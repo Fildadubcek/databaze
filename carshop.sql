@@ -389,3 +389,9 @@ LEFT JOIN garage g ON c.id = g.id;
 FROM car c
 LEFT JOIN car_accessory c_a ON c.id =c_a.car_id
 LEFT JOIN accessory a ON c.id=c_a.accessory_id;
+        
+-- JOIN, WHERE
+        SELECT c.id, c.manufacturer, c.model, c.SPZ, a.name, a.id
+FROM car c
+JOIN accessory a ON a.id =c.id
+WHERE a.name LIKE "Tempomat%";

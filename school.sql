@@ -1,1 +1,34 @@
 
+CREATE TABLE student (
+id int PRIMARY KEY NOT NULL AUTO_INCREMENT ,
+firstname VARCHAR (255),
+lastaname VARCHAR (255), 
+class VARCHAR (255),
+email VARCHAR(255));
+
+INSERT INTO student (firstname, lastname, class, email)
+VALUES ('Ondřej', 'Čábelka','2c', 'ondrej.cabelka@student.ossp.cz'),
+('Jaroslav','Melichar','2c','jaroslav.melichar@student.ossp.cz'),
+('Alexandr','Důlovec','2c','alexandr.dulovec@student.ossp.cz'),
+('Lukáš','Gremlica','2c','lukas.gremlica@student.ossp.cz'),
+('Jaroslav','Kašák','2c','jaroslav.kasak@student.ossp.cz'),
+('Jan','Sefzig','2c','jan-sefzig@student.ossp.cz'),
+('Zuzana','Sahulková','2c','zuzana.sahulkova@student.ossp.cz'),
+('Martin','Hruška','2c','martin.hruska@student.ossp.cz'),
+('Daniel','Šuman','2c','daniel.suman@student.ossp.cz'),
+('Matěj','Pošík','2c','matej.posik@student.ossp.cz'),
+('Filip','Dubček','2c','filip.dubcek@student.ossp.cz');
+
+CREATE TABLE teacher (
+id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+firstname VARCHAR(255),
+lastname VARCHAR(255),
+email VARCHAR(255),
+description text);
+
+INSERT INTO teacher (firstname, lastname, email, description)
+VALUES ('Martin','Kokeš','martin.kokes@ossp.cz','Borec nakonec noo'),
+('Lenka','Sklenářová','lenka.sklenarova@ossp.cz','Matiky dcera'),
+('Milan','Hála','milan.hala@ossp.cz','Nelze dělit nulou'),
+('Tomáš','Marek','tomas.marek@ossp.cz',':) borec'),
+('Anna','Říhová','anna.rihova@ossp.cz','Na pohodičku hodinky');

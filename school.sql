@@ -32,3 +32,25 @@ VALUES ('Martin','Kokeš','martin.kokes@ossp.cz','Borec nakonec noo'),
 ('Milan','Hála','milan.hala@ossp.cz','Nelze dělit nulou'),
 ('Tomáš','Marek','tomas.marek@ossp.cz',':) borec'),
 ('Anna','Říhová','anna.rihova@ossp.cz','Na pohodičku hodinky');
+
+--subject
+CREATE TABLE subject (
+id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+name VARCHAR(255),
+description text);
+
+
+INSERT INTO subject (name, description)
+VALUES ('Webové programování','Základy PHP'),
+('Databáze','Fakt bombička'),
+('Matematika','Ta se školy netýká<3'),
+('Chemie','Peklo na zemi, ale máme pana Hálu'),
+('Literatura','Karel IV ujde'),
+('Praktická cvičení','Trápení'),
+('Značkovací jazyky','Sranda webovky'),
+('Tělesná výchova','Na střední je to nuda'),
+('Český jazyk','Povinnost'),
+('Fyzika','No nevim');
+  
+  ALTER TABLE subject 
+ADD shortname VARCHAR(10);

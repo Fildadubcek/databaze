@@ -33,6 +33,27 @@ VALUES ('Martin','Kokeš','martin.kokes@ossp.cz','Borec nakonec noo'),
 ('Tomáš','Marek','tomas.marek@ossp.cz',':) borec'),
 ('Anna','Říhová','anna.rihova@ossp.cz','Na pohodičku hodinky');
 
+
+INSERT INTO classroom (number, description, building, seats_count, is_computers_lab)
+VALUES ('19','Nej třída','1','15','1'),
+('6A','Koberec','1','30','0'),
+('6B','Málá trída','1','20','0'),
+('2','Malá třída','1','20','0'),
+('1','Grafická třída','1','15','1'),
+('9','Velká třída','2','30','0'),
+('13','Velká třída do kopce','2','30','0'),
+('14','Střední velikost třídy','2','25','0'),
+('4','Mála třída','1','15','1'),
+('10','Mála třída','2','20','0');
+
+CREATE TABLE classroom (
+id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+number VARCHAR(25),
+description text,
+building VARCHAR(2),
+seats_count VARCHAR(2),
+is_computers_lab TINYINT);
+
 --subject
 CREATE TABLE subject (
 id int PRIMARY KEY NOT NULL AUTO_INCREMENT,

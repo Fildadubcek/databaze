@@ -54,3 +54,44 @@ VALUES ('Webové programování','Základy PHP'),
   
   ALTER TABLE subject 
 ADD shortname VARCHAR(10);
+
+
+UPDATE subject 
+SET  shorname = 'WP'
+WHERE  id=1;
+
+UPDATE subject 
+SET  shortname = 'Da'
+WHERE  id=2;
+
+UPDATE subject 
+SET  shortname = 'Ma'
+WHERE  id=3;
+
+UPDATE subject 
+SET  shortname = 'Ch'
+WHERE  id=4;
+
+UPDATE subject 
+SET  shortname = 'Li'
+WHERE  id=5;
+
+UPDATE subject 
+SET  shortname = 'PRC'
+WHERE  id=6;
+
+UPDATE subject 
+SET  shortname = 'ZJ'
+WHERE  id=7;
+
+UPDATE subject 
+SET  shortname = 'TV'
+WHERE  id=8;
+
+UPDATE subject 
+SET  shortname = 'ČJ'
+WHERE  id=9;
+
+UPDATE subject 
+SET  shortname = 'Fy'
+WHERE  id=10;

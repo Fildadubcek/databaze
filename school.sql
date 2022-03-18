@@ -116,3 +116,17 @@ WHERE  id=9;
 UPDATE subject 
 SET  shortname = 'Fy'
 WHERE  id=10;
+
+
+-- UNIQUE
+
+ALTER TABLE classroom 
+ADD UNIQUE (number);
+
+ALTER TABLE student
+ADD UNIQUE (email);
+
+ALTER TABLE teacher
+ADD UNIQUE (email);
+
+

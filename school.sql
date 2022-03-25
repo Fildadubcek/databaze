@@ -216,3 +216,6 @@ UPDATE student SET class_id = 1 WHERE id =4;
 UPDATE student SET class_id = 1 WHERE id =3;  
 UPDATE student SET class_id = 1 WHERE id =2;  
 UPDATE student SET class_id = 1 WHERE id =1
+
+ALTER TABLE student
+ADD FOREIGN KEY (class_id) REFERENCES class(id);

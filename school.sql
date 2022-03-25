@@ -129,4 +129,38 @@ ADD UNIQUE (email);
 ALTER TABLE teacher
 ADD UNIQUE (email);
 
+-- schedule
 
+CREATE TABLE schedule (
+id int PRIMARY KEY AUTO_INCREMENT NOT_NULL,
+classroom_id int,
+teacher_id int,
+subject_id int,
+lesson_number int,
+day_of_week tinyint
+);
+
+ALTER TABLE schedule 
+ADD FOREIGN KEY (classroom_id) REFERENCES classroom(id)
+;
+
+ALTER TABLE schedule 
+ADD FOREIGN KEY (teacher_id) REFERENCES teacher(id)
+;
+
+ALTER TABLE schedule 
+ADD FOREIGN KEY (subject_id) REFERENCES subject(id)
+;
+
+INSERT INTO schedule (classroom_id, teacher_id, subject_id, lesson_number, day_of_week)
+VALUES (1,1,2,2,5),
+(1,1,2,3,5),
+(1,1,1,4,5),
+(1,1,1,5,5),
+(7,3,4,1,1),
+(1,2,6,5,1),
+(1,2,6,6,1),
+(6,5,9,3,4),
+(5,2,7,5,3),
+(5,2,7,6,3)
+;

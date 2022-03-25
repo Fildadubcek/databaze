@@ -34,6 +34,8 @@ VALUES ('Martin','Kokeš','martin.kokes@ossp.cz','Borec nakonec noo'),
 ('Anna','Říhová','anna.rihova@ossp.cz','Na pohodičku hodinky');
 
 
+
+
 INSERT INTO classroom (number, description, building, seats_count, is_computers_lab)
 VALUES ('19','Nej třída','1','15','1'),
 ('6A','Koberec','1','30','0'),
@@ -164,3 +166,53 @@ VALUES (1,1,2,2,5),
 (5,2,7,5,3),
 (5,2,7,6,3)
 ;
+-- tabulka class
+
+CREATE TABLE class (
+id int PRIMARY KEY AUTO_INCREMENT NOT NULL ,
+name VARCHAR (255), 
+description text);
+
+INSERT INTO class (name, description)
+VALUES ('2.C', 'Dost krutý týpci a jedna borka'),
+('2.A','Emaři'),
+('2.B','Nejsou moc hustý, spíš tlustý(joke)'),
+('3.B','Moc je neznám, ale mám tam slečnu');
+
+ALTER TABLE schedule 
+ADD class_id int;
+
+ALTER TABLE schedule 
+ADD FOREIGN KEY (class_id)REFERENCES  class(id);
+
+UPDATE schedule  SET class_id =1 WHERE id =10;  
+UPDATE schedule  SET class_id =1 WHERE id =9;  
+UPDATE schedule  SET class_id =1 WHERE id =8;  
+UPDATE schedule  SET class_id =1 WHERE id =7;  
+UPDATE schedule  SET class_id =1 WHERE id =6;  
+UPDATE schedule  SET class_id =1 WHERE id =5;  
+UPDATE schedule  SET class_id =5 WHERE id =5;  
+UPDATE schedule  SET class_id = 5 WHERE id =5;  
+UPDATE schedule  SET class_id = 4 WHERE id =4;  
+UPDATE schedule  SET class_id = 3 WHERE id =3;  
+UPDATE schedule  SET class_id = 2 WHERE id =2;  
+UPDATE schedule  SET class_id = 1 WHERE id =1; 
+
+
+ALTER TABLE student
+DROP COLUMN class;
+
+ALTER TABLE student
+ADD class_id int;
+
+
+UPDATE student SET class_id = 1 WHERE id =10;  
+UPDATE student SET class_id = 1 WHERE id =9;  
+UPDATE student SET class_id = 1 WHERE id =8;  
+UPDATE student SET class_id = 1 WHERE id =7;  
+UPDATE student SET class_id = 1 WHERE id =6;  
+UPDATE student SET class_id = 1 WHERE id =5;  
+UPDATE student SET class_id = 1 WHERE id =4;  
+UPDATE student SET class_id = 1 WHERE id =3;  
+UPDATE student SET class_id = 1 WHERE id =2;  
+UPDATE student SET class_id = 1 WHERE id =1

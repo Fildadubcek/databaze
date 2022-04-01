@@ -219,3 +219,13 @@ UPDATE student SET class_id = 1 WHERE id =1
 
 ALTER TABLE student
 ADD FOREIGN KEY (class_id) REFERENCES class(id);
+
+
+ -- schedule join 
+ 
+ SELECT s.day_of_week,s.lesson_number, c.name, clr.number,su.shortname, t.lastname 
+FROM schedule s
+JOIN class c ON s.class_id=c.id
+JOIN classroom clr ON s.classroom_id=clr.id
+JOIN subject su ON s.subject_id=su.id
+JOIN teacher t ON s.teacher_id=t.id;

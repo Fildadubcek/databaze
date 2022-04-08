@@ -230,3 +230,11 @@ JOIN classroom clr ON s.classroom_id=clr.id
 JOIN subject su ON s.subject_id=su.id
 JOIN teacher t ON s.teacher_id=t.id
 ORDER BY s.day_of_week, s.lesson_number;
+
+
+ --Předměty a učitelé v pondělí
+SELECT su.shortname, t.firstname, t.lastname, s.day_of_week
+FROM schedule s
+JOIN teacher t ON s.teacher_id=t.id
+JOIN subject su ON s.subject_id=su.id
+WHERE s.day_of_week=1;

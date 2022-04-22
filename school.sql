@@ -238,3 +238,34 @@ FROM schedule s
 JOIN teacher t ON s.teacher_id=t.id
 JOIN subject su ON s.subject_id=su.id
 WHERE s.day_of_week=1;
+
+ -- Classification 
+ CREATE TABLE classification (
+id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+grade tinyint,
+student_id int,
+teacher_id int,
+description text,
+created_at datetime
+);
+ALTER TABLE classification 
+ADD FOREIGN KEY (teacher_id) REFERENCES teacher(id);
+
+INSERT INTO classification (grade, student_id, subject_id, teacher_id, created_at)
+VALUES (1,11,1,1,now()),
+(5,1,1,1,now()),
+(2,2,4,3,now()),
+(3,3,3,2,now()),
+(4,4,4,4,now()),
+(5,5,5,5,now()),
+(1,6,6,1,now()),
+(2,7,7,2,now()),
+(5,10,10,5,now()),
+(4,9,9,3,now());
+
+SELECT CONCAT(s.firstname, ' ',s.lastname) AS 'ŽÁK',CONCAT(t.firstname, ' ',t.lastname) AS 'UČITEL',
+c.grade AS 'Známka',su.shortname AS 'Předmět', c.description 
+FROM classification c
+JOIN student s ON c.student_id=s.id
+JOIN teacher t ON c.teacher_id=t.id
+JOIN subject su ON c.subject_id=su.id;

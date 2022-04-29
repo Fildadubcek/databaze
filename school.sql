@@ -269,3 +269,38 @@ FROM classification c
 JOIN student s ON c.student_id=s.id
 JOIN teacher t ON c.teacher_id=t.id
 JOIN subject su ON c.subject_id=su.id;
+
+
+-- Statistika 
+
+SELECT AVG(grade)
+FROM classification
+;
+SELECT MAX(grade)
+FROM classification
+;
+SELECT MIN(grade)
+FROM classification
+;
+SELECT AVG(grade)
+FROM classification 
+GROUP BY student_id
+;
+
+SELECT AVG(c.grade), s.shortname
+FROM classification c
+JOIN subject s ON c.subject_id=s.id
+GROUP BY s.shortname
+;
+
+SELECT MAX(c.grade), s.shortname
+FROM classification c
+JOIN subject s ON c.subject_id=s.id
+GROUP BY s.shortname
+;
+
+SELECT MIN(c.grade), s.shortname
+FROM classification c
+JOIN subject s ON c.subject_id=s.id
+GROUP BY s.shortname
+;

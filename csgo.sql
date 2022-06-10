@@ -177,13 +177,14 @@ FROM players  ;
 SELECT COUNT(age)
 FROM players  ;
 
-SELECT COUNT(p.age), p.name
+SELECT MIN(p.age), p.name
 FROM players p 
 JOIN skins s ON p.skin_id=s.id
 GROUP BY p.name
-HAVING (p.name) <5;
+HAVING MIN(p.age) <30;
 
 SELECT * FROM players 
 WHERE name LIKE 'k%';
 
-
+SELECT * FROM players 
+WHERE name NOT LIKE 'k%';

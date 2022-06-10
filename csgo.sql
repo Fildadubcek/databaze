@@ -188,3 +188,9 @@ WHERE name LIKE 'k%';
 
 SELECT * FROM players 
 WHERE name NOT LIKE 'k%';
+
+SELECT COUNT(m.id), m.name
+FROM players p 
+JOIN maps m ON p.map_id=m.id
+GROUP BY (m.name);
+
